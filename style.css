@@ -423,8 +423,3 @@ footer .footer-brand strong {
     margin: 3rem 0;
 }
 
-/* Ensure Bootstrap's dark theme related attributes are not conflicting if you decide to use them elsewhere */
-[data-bs-theme="dark"] {
-    /* If you were to use Bootstrap's dark mode toggle, you might need to adjust here,
-       but for this fully custom dark theme, it's less relevant. */
-}
