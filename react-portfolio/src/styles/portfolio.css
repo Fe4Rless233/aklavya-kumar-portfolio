@@ -347,6 +347,43 @@ html {
 }
 
 /* Hero Section */
+/* About image centering and profile styles */
+.about-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-main-image {
+    position: relative;
+    display: inline-block;
+}
+.profile-image-large {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.profile-image-large:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+.image-border-effect {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border-radius: 20px;
+    border: 2px solid rgba(138, 43, 226, 0.12);
+    pointer-events: none;
+    transform: rotate(-2deg);
+}
+
+/* Hero Section */
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -542,7 +579,7 @@ html {
 
 .btn-hero-secondary:hover {
     background-position: 0% 0%;
-    transform: translateY(-8px) scale(1.05);
+    transform: translateY(-4px) scale(1.03);
     box-shadow: 
         0 20px 40px rgba(0, 212, 255, 0.6),
         inset 0 1px 0 rgba(255, 255, 255, 0.2),
@@ -649,6 +686,41 @@ html {
     100% { transform: rotate(360deg); }
 }
 
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .btn-hero-primary, .btn-hero-secondary, .btn-glow { transition: none !important; }
+  .btn-hero-primary:hover, .btn-hero-secondary:hover, .btn-glow:hover { transform: none !important; box-shadow: none !important; }
+}
+
+/* Milder hover and accessibility improvements */
+.btn-hero-primary:hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 6px 20px rgba(102,126,234,0.35); }
+.btn-hero-secondary:hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 8px 20px rgba(0,212,255,0.28); }
+
+/* Prefer focus-visible for keyboard users */
+.btn-hero-primary:focus-visible, .btn-hero-secondary:focus-visible, .btn-glow:focus-visible {
+  outline: 3px solid rgba(0,212,255,0.28);
+  outline-offset: 3px;
+}
+
+/* Responsive spacing and button size */
+@media (max-width: 992px) {
+  .section-padding { padding: 60px 0; }
+  .hero-section { padding: 80px 16px; }
+  .btn-lg { min-width: 160px; padding: 12px 28px; }
+}
+@media (max-width: 768px) {
+  .section-padding { padding: 40px 0; }
+  .about-stats { gap: 18px; }
+  .profile-image-large { max-width: 280px; }
+  .nav-link { padding: 0.5rem 0.75rem !important; }
+}
+
+/* Reduce motion on small screens */
+@media (max-width: 480px) {
+  .btn-hero-primary:hover, .btn-hero-secondary:hover { transform: none; }
+}
+
+/* Preserve original marker */
 /* Section Styles */
 .section-padding {
     padding: 80px 0;
