@@ -54,10 +54,10 @@ const PROJECTS_DATA = [
         category: "coding",
         categoryName: "Game & Software Dev",
         status: "National 8th Place Game",
-        image: "img/cvcoding.png",
+        image: "img/DTPMF.png",
         summary: "Published interactive computer game developed for FBLA Intro to Programming competition, securing 8th Place Nationally.",
         details: "Developed 'The Destruction of the Possible Mission Force', a full game featuring algorithmic logic, custom graphics, and user interactivity. Published live on itch.io with full open-source codebase on GitHub.",
-        tags: ["Published Game", "itch.io", "GitHub Open Source", "FBLA National 8th", "Python", "Game Architecture"],
+        tags: ["Published Game", "DTPMF", "itch.io", "GitHub Open Source", "FBLA National 8th", "Python", "Game Architecture"],
         metrics: "Published on itch.io | National 8th Place",
         link: "https://readingcookiesa.itch.io/the-destruction-of-the-possible-mission-force",
         linkText: "Play Game on itch.io"
@@ -71,10 +71,10 @@ const PROJECTS_DATA = [
         image: "img/IRO.jpg",
         summary: "Personally achieved World Semi-Finalist status in the International Research Olympiad, ranking in the Top 10% globally.",
         details: "Competed individually in the International Research Olympiad (IRO), demonstrating advanced experimental design, data analysis, and scientific literature interpretation to achieve World Semi-Finalist recognition (Top 10% in the world). Founder & President of CVHS IRO Club.",
-        tags: ["IRO World Semi-Finalist", "Top 10% in World", "Scientific Research", "Data Processing", "CV IRO President"],
+        tags: ["IRO World Semi-Finalist", "Top 10% in World", "Official Certificate PDF", "Scientific Research", "CV IRO President"],
         metrics: "Top 10% World Rank (IRO Semi-Finalist)",
-        link: "img/IRO.jpg",
-        linkText: "View IRO Poster Credentials"
+        link: "img/IRO-2026-Certificate-Aklavya.pdf",
+        linkText: "View Official IRO Certificate (PDF)"
     },
     {
         id: "penn-state-pulse-med",
