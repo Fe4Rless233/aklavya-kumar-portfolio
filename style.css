@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Aklavya Kumar Portfolio - Cyber Glass Fabulous Dark Theme
-   Featuring Advanced Scroll Interactions & Mobile Navigation System
+   Aklavya Kumar Portfolio - Cyber Glass Dark Theme System
+   Mobile Responsive & Strict Zero-Horizontal-Overflow CSS Engine
    ========================================================================== */
 
 :root {
@@ -42,7 +42,7 @@
     --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --- Global Reset & Base --- */
+/* --- Global Reset & Strict Mobile Overflow Lock --- */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -52,6 +52,9 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden !important;
+    max-width: 100vw;
+    width: 100%;
 }
 
 body {
@@ -59,9 +62,16 @@ body {
     color: var(--text-primary);
     font-family: var(--font-body);
     line-height: 1.65;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    max-width: 100vw;
+    width: 100%;
     position: relative;
     padding-top: 80px;
+}
+
+section, header, footer, nav {
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /* --- 1. Top Scroll Progress Indicator Bar --- */
@@ -82,7 +92,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     pointer-events: none;
     z-index: 0;
@@ -94,6 +104,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.02em;
+    word-wrap: break-word;
 }
 
 a {
@@ -162,13 +173,13 @@ a:hover {
 
 .scroll-reveal-left {
     opacity: 0;
-    transform: translateX(-55px);
+    transform: translateX(-40px);
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .scroll-reveal-right {
     opacity: 0;
-    transform: translateX(55px);
+    transform: translateX(40px);
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -184,6 +195,14 @@ a:hover {
 .scroll-reveal-scale.is-visible {
     opacity: 1;
     transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Mobile Scroll Reveal Override (Prevents X-axis translate offscreen overflow) */
+@media (max-width: 768px) {
+    .scroll-reveal-left,
+    .scroll-reveal-right {
+        transform: translateY(35px);
+    }
 }
 
 /* Stagger Delays */
@@ -301,8 +320,8 @@ a:hover {
     position: fixed;
     top: 0;
     right: 0;
-    width: 320px;
-    max-width: 85vw;
+    width: 300px;
+    max-width: 82vw;
     height: 100vh;
     background: var(--bg-surface-elevated);
     border-left: 1px solid var(--border-color-glow);
@@ -412,11 +431,12 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 0 15px rgba(255, 43, 85, 0.15);
+    max-width: 100%;
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    line-height: 1.1;
+    font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+    line-height: 1.15;
     margin-bottom: 20px;
 }
 
@@ -437,19 +457,21 @@ a:hover {
 
 .profile-halo-container {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
+    max-width: 85vw;
+    max-height: 85vw;
     margin: 0 auto;
 }
 
 .profile-halo-container::before {
     content: '';
     position: absolute;
-    inset: -15px;
+    inset: -12px;
     border-radius: 50%;
     background: conic-gradient(from 0deg, var(--accent-red), var(--accent-cyan), var(--accent-purple), var(--accent-red));
     animation: spinHalo 10s linear infinite;
-    filter: blur(20px);
+    filter: blur(18px);
     opacity: 0.75;
 }
 
@@ -485,8 +507,8 @@ a:hover {
     animation: floatBadge 4s ease-in-out infinite alternate;
 }
 
-.floating-badge.badge-1 { top: 20px; left: -30px; animation-delay: 0s; }
-.floating-badge.badge-2 { bottom: 30px; right: -20px; animation-delay: 2s; }
+.floating-badge.badge-1 { top: 20px; left: -20px; animation-delay: 0s; }
+.floating-badge.badge-2 { bottom: 30px; right: -15px; animation-delay: 2s; }
 
 @keyframes floatBadge {
     0% { transform: translateY(0px); }
@@ -525,7 +547,7 @@ a:hover {
 
 /* --- 8. Section Formatting --- */
 .section-padding {
-    padding: 100px 0;
+    padding: 90px 0;
     position: relative;
     z-index: 1;
 }
@@ -533,7 +555,7 @@ a:hover {
 .section-header {
     text-align: center;
     max-width: 750px;
-    margin: 0 auto 60px;
+    margin: 0 auto 50px;
 }
 
 .section-tag {
@@ -547,13 +569,13 @@ a:hover {
 }
 
 .section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.8rem, 4vw, 3rem);
     margin-bottom: 16px;
 }
 
 .section-desc {
     color: var(--text-secondary);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 /* --- 9. Projects Showcase Hub --- */
@@ -564,12 +586,14 @@ a:hover {
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 40px;
+    max-width: 100%;
 }
 
 .filter-pills {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    max-width: 100%;
 }
 
 .filter-btn {
@@ -595,6 +619,7 @@ a:hover {
 .search-box {
     position: relative;
     min-width: 280px;
+    max-width: 100%;
 }
 
 .search-box input {
@@ -740,7 +765,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 16px;
     opacity: 0;
     visibility: hidden;
     transition: var(--transition-smooth);
@@ -759,7 +784,7 @@ a:hover {
     width: 100%;
     max-height: 90vh;
     overflow-y: auto;
-    padding: 36px;
+    padding: 30px 24px;
     position: relative;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), var(--shadow-glow);
     transform: scale(0.9);
@@ -772,8 +797,8 @@ a:hover {
 
 .modal-close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 16px;
+    right: 16px;
     background: rgba(255, 255, 255, 0.1);
     border: none;
     color: var(--text-primary);
@@ -820,47 +845,7 @@ a:hover {
     box-shadow: 0 0 10px var(--accent-cyan-glow);
 }
 
-/* --- 12. Timeline Layout --- */
-.timeline-container {
-    position: relative;
-    padding-left: 30px;
-}
-
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    left: 8px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(180deg, var(--accent-red) 0%, var(--accent-cyan) 50%, var(--accent-purple) 100%);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: -30px;
-    top: 4px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--accent-red);
-    border: 3px solid var(--bg-dark);
-    box-shadow: 0 0 12px var(--accent-red);
-}
-
-.timeline-date {
-    color: var(--accent-cyan);
-    font-weight: 700;
-    font-size: 0.85rem;
-    margin-bottom: 6px;
-}
-
-/* --- 13. Contact Form & Buttons --- */
+/* --- 12. Contact Form & Buttons --- */
 .form-control-custom {
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
@@ -918,13 +903,13 @@ a:hover {
     transform: translateY(-3px);
 }
 
-/* --- 14. Back to Top Button --- */
+/* --- 13. Back to Top Button --- */
 #back-to-top {
     position: fixed;
-    bottom: 35px;
-    right: 35px;
-    width: 50px;
-    height: 50px;
+    bottom: 25px;
+    right: 25px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     background: var(--bg-surface-elevated);
     border: 1px solid var(--accent-red);
@@ -932,7 +917,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
     z-index: 2000;
     opacity: 0;
@@ -949,28 +934,30 @@ a:hover {
 #back-to-top:hover {
     background: var(--accent-red);
     color: #fff;
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
-/* --- 15. Footer --- */
+/* --- 14. Footer --- */
 footer {
     background: #040508;
     border-top: 1px solid var(--border-color);
-    padding: 60px 0 30px;
+    padding: 50px 0 30px;
     text-align: center;
     color: var(--text-secondary);
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 24px;
+    gap: 16px;
+    margin-bottom: 20px;
 }
 
 .social-icon-btn {
-    width: 46px;
-    height: 46px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
@@ -978,27 +965,27 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: var(--transition-fast);
 }
 
 .social-icon-btn:hover {
     background: var(--accent-red);
     color: #fff;
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     box-shadow: 0 4px 15px var(--accent-red-glow);
 }
 
-/* --- 16. Mobile & Tablet Responsiveness --- */
+/* --- 15. Strict Mobile & Tablet Responsive Lock --- */
 @media (max-width: 991px) {
     body { padding-top: 70px; }
     .mobile-nav-toggle { display: flex; }
     .hero-section { text-align: center; }
-    .hero-bio { margin: 0 auto 36px; }
-    .profile-halo-container { width: 260px; height: 260px; margin-top: 40px; }
-    .floating-badge { display: none; }
+    .hero-bio { margin: 0 auto 32px; }
+    .profile-halo-container { width: 250px; height: 250px; margin-top: 20px; }
+    .floating-badge { display: none !important; }
     .showcase-controls { flex-direction: column; align-items: stretch; }
-    .search-box { min-width: 100%; }
+    .search-box { min-width: 100%; width: 100%; }
     
     .filter-pills {
         overflow-x: auto;
@@ -1006,6 +993,7 @@ footer {
         padding-bottom: 10px;
         -webkit-overflow-scrolling: touch;
         flex-wrap: nowrap;
+        width: 100%;
     }
     
     .filter-pills::-webkit-scrollbar {
@@ -1017,9 +1005,12 @@ footer {
 }
 
 @media (max-width: 576px) {
-    .hero-title { font-size: 2.2rem; }
-    .hero-subtitle { font-size: 1.1rem; }
-    .stat-number { font-size: 2.2rem; }
-    .stat-label { font-size: 0.8rem; }
+    .hero-title { font-size: 2.1rem; }
+    .hero-subtitle { font-size: 1.05rem; }
+    .stat-number { font-size: 2.1rem; }
+    .stat-label { font-size: 0.75rem; }
     .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; }
+    .container { padding-left: 16px; padding-right: 16px; }
+    .row { margin-left: -8px; margin-right: -8px; }
+    [class*="col-"] { padding-left: 8px; padding-right: 8px; }
 }
