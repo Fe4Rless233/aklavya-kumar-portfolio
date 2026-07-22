@@ -1,136 +1,150 @@
 /**
  * Aklavya Kumar Portfolio - Dynamic Interactive Engine (main.js)
- * Class of 2027 | Cumberland Valley High School
- * Advanced Scroll-Based Interaction System
+ * High School Senior (Class of 2027) | Cumberland Valley High School
+ * Multi-Page Interactive Engine with Verified Credentials & Direct Links
  */
 
-// --- 1. Comprehensive Project Database ---
+// --- 1. Comprehensive Verified Project Database ---
 const PROJECTS_DATA = [
     {
-        id: "ftc-autonomous-pedro",
-        title: "Autonomous FIRST Robotics Modules (RoadRunner & PedroPathing)",
+        id: "ftc-8468-javengers",
+        title: "FTC 8468 - The Javengers (Upcoming Season)",
         category: "robotics",
         categoryName: "Robotics & AI",
-        status: "State Finalist & Award Winning",
+        status: "Dean's List Semi-Finalist",
         image: "img/ftc-team.jpg",
-        summary: "Millimeter-precision autonomous driving modules using Java, Road Runner, PedroPathing, OpenCV vision tracking, and REV hardware.",
-        details: "As Build & Programming Lead and Dean's List Finalist for FTC Team 14464 BotBusters, Aklavya developed autonomous driving modules with millimeter-level precision using Java, RoadRunner trajectory generation, PedroPathing, and OpenCV computer vision. Led team to 3 consecutive PA State Championship finals, winning Motivate, Connect, Inspire, Control, and Think team awards, as well as Winning Alliance Captain.",
-        tags: ["Java", "RoadRunner", "PedroPathing", "OpenCV", "PID Control", "FTC Robotics", "REV Hardware"],
-        metrics: "3x State Finalist | Motivate, Connect, Inspire, Control, Think Awards",
-        link: "http://AI-Robotics.us",
-        linkText: "Robotics Team Site"
+        summary: "Build & Programming Lead for FTC 8468 The Javengers (Family/Community Team, Mechanicsburg PA, Rookie Year 2014).",
+        details: "Aklavya is Build & Programming Lead for FTC 8468 The Javengers, a premier family/community FIRST Tech Challenge robotics team based in Mechanicsburg, PA (Rookie Year: 2014). Previously competed with FTC 14464 BotBusters. Sponsored by leading corporations including Optum, TE Connectivity, Bank of America, and UnitedHealth Group. Dean's List Semi-Finalist, leading autonomous navigation with Java, RoadRunner, PedroPathing, and OpenCV.",
+        tags: ["FTC 8468 The Javengers", "Dean's List Semi-Finalist", "Java", "PedroPathing", "RoadRunner", "Optum & TE Sponsored", "PACAR Robotics"],
+        metrics: "FTC 8468 Lead | Dean's List Semi-Finalist",
+        link: "http://www.pacar-robotics.org",
+        linkText: "Visit PACAR Robotics (pacar-robotics.org)"
     },
     {
-        id: "bci-burnout-prevention",
-        title: "Brain-Computer Interface (BCI) Burnout Prevention",
+        id: "cognitrack-bci",
+        title: "CogniTrack: BCI for Cognitive Fatigue & Burnout Monitoring",
         category: "biotech",
         categoryName: "Biotechnology & AI",
-        status: "Active Research Project",
+        status: "Published Research Project",
         image: "img/biotech.jpg",
-        summary: "Developing a BCI system utilizing neural signal data analysis to detect cognitive fatigue and prevent student/adult burnout.",
-        details: "Integrating neuro-engineering principles, signal processing, and machine learning (PyTorch/TensorFlow), Aklavya architected a Brain-Computer Interface (BCI) research project aimed at real-time cognitive workload monitoring to prevent academic and workplace burnout.",
-        tags: ["Brain-Computer Interface", "Machine Learning", "PyTorch", "Python", "Bio-Signals", "Neural Engineering"],
-        metrics: "BCI & Machine Learning Research",
-        link: "https://github.com/Fe4Rless233",
-        linkText: "GitHub Research"
+        summary: "Brain-Computer Interface (BCI) system utilizing neural signal data to objectively monitor cognitive fatigue and prevent student burnout.",
+        details: "Developed CogniTrack, a Brain-Computer Interface (BCI) system designed to monitor real-time cognitive fatigue and prevent academic and workplace burnout. Published complete technical paper and architecture breakdown on Medium.",
+        tags: ["CogniTrack", "Brain-Computer Interface", "Medium Article", "PyTorch", "Neuro-Engineering", "Machine Learning"],
+        metrics: "Published BCI System Paper",
+        link: "https://medium.com/@aklavyakumr/cognitrack-a-brain-computer-interface-for-objective-monitoring-of-cognitive-fatigue-and-student-2f5b4cb5b3b6?sharedUserId=aklavyakumr",
+        linkText: "Read CogniTrack Article on Medium"
     },
     {
-        id: "fbla-national-awards",
-        title: "FBLA National Dual Top-10 & State Championship",
+        id: "fbla-national-top10",
+        title: "FBLA Dual National Top 10 & State Championship",
         category: "leadership",
         categoryName: "Leadership & Business",
-        status: "National 8th & 10th Place",
+        status: "National 8th & 10th Place Placer",
         image: "img/fbla.png",
-        summary: "8th Place Nationally in Intro to Programming (2025) and 10th Place Nationally in Management Information Systems (2026). 1st Place PA State Champion.",
-        details: "Representing Cumberland Valley High School and Region 26 (where Aklavya serves as Regional Treasurer), he placed 8th Nationally in Intro to Programming (2025) and 10th Nationally in Management Information Systems (2026) at FBLA NLC. Placed 1st in PA State in MIS (2026), 3rd in State in Intro to Programming, 3rd in Fundamentals of AI, and DECA State Qualifier.",
-        tags: ["FBLA National 8th & 10th", "PA 1st Place MIS", "Python", "SQL", "DECA State Qualifier", "Region 26 Treasurer"],
-        metrics: "2x National Top 10 | 1st Place PA State Champion",
-        link: "https://www.linkedin.com/in/aklavyakumar",
-        linkText: "LinkedIn Honors"
+        summary: "8th Place Nationally in Intro to Programming (2025) and 10th Place Nationally in Management Info Systems (2026). 1st Place PA State Champion.",
+        details: "Representing CVHS and Region 26 (where Aklavya serves as Regional Treasurer), placed 8th Nationally in Intro to Programming (2025) and 10th Nationally in Management Information Systems (2026) at FBLA NLC. Credly Verified Badge earned. 1st Place PA State Champion in MIS (2026), 3rd Place in Intro to Programming, and 3rd Place in Fundamentals of AI.",
+        tags: ["FBLA 8th & 10th National", "PA 1st Place MIS", "Credly Verified", "Python", "SQL", "DECA State Qualifier"],
+        metrics: "8th & 10th Place Nationally | Credly Badge Verified",
+        link: "https://www.credly.com/badges/4bc863de-348f-409d-92ae-2020ad48edf7/linked_in_profile",
+        linkText: "View Credly Verified Badge"
     },
     {
-        id: "penn-state-pulse",
-        title: "Penn State College of Medicine PULSE Internship",
+        id: "fbla-intro-programming-game",
+        title: "FBLA Game: The Destruction of the Possible Mission Force",
+        category: "coding",
+        categoryName: "Game & Software Dev",
+        status: "National 8th Place Game",
+        image: "img/cvcoding.png",
+        summary: "Published interactive computer game developed for FBLA Intro to Programming competition, securing 8th Place Nationally.",
+        details: "Developed 'The Destruction of the Possible Mission Force', a full game featuring algorithmic logic, custom graphics, and user interactivity. Published live on itch.io with full open-source codebase on GitHub.",
+        tags: ["Published Game", "itch.io", "GitHub Open Source", "FBLA National 8th", "Python", "Game Architecture"],
+        metrics: "Published on itch.io | National 8th Place",
+        link: "https://readingcookiesa.itch.io/the-destruction-of-the-possible-mission-force",
+        linkText: "Play Game on itch.io"
+    },
+    {
+        id: "iro-semi-finalist",
+        title: "International Research Olympiad (IRO) World Semi-Finalist",
+        category: "biotech",
+        categoryName: "Research & Science",
+        status: "Top 10% in the World",
+        image: "img/IRO.jpg",
+        summary: "Personally achieved World Semi-Finalist status in the International Research Olympiad, ranking in the Top 10% globally.",
+        details: "Competed individually in the International Research Olympiad (IRO), demonstrating advanced experimental design, data analysis, and scientific literature interpretation to achieve World Semi-Finalist recognition (Top 10% in the world). Founder & President of CVHS IRO Club.",
+        tags: ["IRO World Semi-Finalist", "Top 10% in World", "Scientific Research", "Data Processing", "CV IRO President"],
+        metrics: "Top 10% World Rank (IRO Semi-Finalist)",
+        link: "img/IRO.jpg",
+        linkText: "View IRO Poster Credentials"
+    },
+    {
+        id: "penn-state-pulse-med",
+        title: "Penn State College of Medicine PULSE Scholar",
         category: "biotech",
         categoryName: "Biotechnology & Medicine",
-        status: "Selective 12-Week Pathway",
-        image: "img/nasa.webp",
-        summary: "Selected for 12-week longitudinal pathway curriculum in Penn State College of Medicine with clinical shadowing & problem-based research.",
-        details: "Competitively selected for Penn State College of Medicine's 12-week PULSE curriculum. Participated in clinical shadowing, problem-based medical learning, and interdisciplinary bio-medical lectures exploring clinical application of technology.",
-        tags: ["Penn State Medicine", "PULSE Program", "Clinical Shadowing", "Biomedical Research"],
-        metrics: "12-Week Medical Pathway Scholar",
-        link: "https://www.linkedin.com/in/aklavyakumar",
-        linkText: "View Internship Credentials"
+        status: "Selective Medical Pathway",
+        image: "img/PULSE.png",
+        summary: "Selected for 12-week longitudinal pathway curriculum in Penn State College of Medicine with clinical shadowing & problem-based learning.",
+        details: "Competitively selected for Penn State College of Medicine's 12-week PULSE program. Participated in clinical shadowing, interactive medical lectures, and problem-based biomedical research.",
+        tags: ["Penn State Medicine", "PULSE Scholar", "Clinical Shadowing", "Biomedical Credential"],
+        metrics: "Penn State Medicine PULSE Scholar",
+        link: "img/PULSE.png",
+        linkText: "View PULSE Certificate"
     },
     {
-        id: "cv-coding-club-founder",
-        title: "CV Coding Club Founder & ACSL/USACO Mentorship",
+        id: "cv-coding-club-usaco",
+        title: "CV Coding Club Founder & USACO Silver Mentorship",
         category: "coding",
         categoryName: "Competitive Coding",
         status: "President & Founder",
         image: "img/cvcoding.png",
-        summary: "Founded competitive coding club at CVHS; coached 10+ members to Silver or higher in USACO, including 4 Gold-ranked programmers.",
-        details: "Founded and serves as President of Cumberland Valley High School's Coding Club. Built a structured curriculum for USACO and ACSL competitions. Successfully mentored over 10 students who achieved USACO Silver rank or higher, including 4 USACO Gold-ranked members.",
-        tags: ["President & Founder", "USACO 4 Gold Students", "C++", "Python", "Algorithms", "Data Structures"],
-        metrics: "10+ USACO Silver+ Members | 4 Gold Members",
-        link: "https://github.com/Fe4Rless233",
-        linkText: "Club Repositories"
+        summary: "Founded CV Coding Club & created curriculum that directly trained 4 students to reach USACO Silver rank.",
+        details: "Founded and serves as President of Cumberland Valley High School's Coding Club. Created official website and structured USACO/ACSL curriculum. Taught algorithmic problem solving, training 4 CVHS members to reach USACO Silver rank.",
+        tags: ["CV Coding Club President", "4 USACO Silver Students Coached", "C++", "Python", "Algorithms"],
+        metrics: "4 USACO Silver Students Trained",
+        link: "https://fe4rless233.github.io/CVcodingclub/index.html",
+        linkText: "Visit CV Coding Club Website"
     },
     {
-        id: "scioly-national-medalist",
-        title: "Science Olympiad National Competitor & Developer",
+        id: "scioly-robot-tour",
+        title: "Science Olympiad Robot Tour & National Team Rank",
         category: "robotics",
-        categoryName: "Robotics & AI",
-        status: "National 19th & 20th Place Team",
-        image: "img/cv.jpeg",
-        summary: "Varsity competitor leading robotics, engineering, physics & lab events; led 50+ member team to 19th (2024) and 20th (2025) at Nationals.",
-        details: "Competitor and developer for CV Science Olympiad across build, lab, physics, and data-driven events. Earned 20+ individual awards & 15+ team awards across UPenn, MIT, Penn State, and National tournaments, helping team rank 19th (2024) and 20th (2025) in the United States.",
-        tags: ["Science Olympiad", "MIT Invitational", "UPenn", "Penn State", "Engineering", "Physics"],
-        metrics: "20+ Individual Medals | 19th & 20th Nationally",
-        link: "https://www.cvschools.org",
-        linkText: "CV Schools News"
+        categoryName: "Robotics & Engineering",
+        status: "National 19th & 20th Team Rank",
+        image: "img/robotTour.jpg",
+        summary: "Built autonomous Robot Tour vehicle for SciOly; helped CVHS team achieve 19th (2024) and 20th (2025) National Team Rank.",
+        details: "Varsity developer and event leader for Cumberland Valley Science Olympiad. Engineered autonomous Robot Tour vehicle (open-source on GitHub). Earned 20+ individual awards & 15+ team awards across UPenn, MIT, Penn State, and Nationals, placing 19th (2024) and 20th (2025) Nationally as a team.",
+        tags: ["Robot Tour", "Science Olympiad", "19th & 20th National Team Rank", "GitHub", "Autonomous Hardware"],
+        metrics: "19th & 20th National Team Rank",
+        link: "https://github.com/Fe4Rless233/Robot-Tour",
+        linkText: "Robot Tour GitHub Repository"
     },
     {
-        id: "bengali-community-react-next",
-        title: "Bengali Community Official Web Platform (React & Next.js)",
-        category: "coding",
-        categoryName: "Web & Full-Stack",
-        status: "Live Production Site",
-        image: "img/abha.jpg",
-        summary: "Created and maintained the official production web application for local Bengali community using React, Next.js, and TypeScript.",
-        details: "Designed, developed, and deployed the official web portal for the Association of Bengalis in Harrisburg Area (ABHA) utilizing React, Next.js, TypeScript, and modern styling. Serves hundreds of community members and facilitates annual fundraising ($300+ raised annually).",
-        tags: ["React", "Next.js", "TypeScript", "JavaScript", "HTML/CSS", "Full-Stack Web"],
-        metrics: "Live Production Site | Hundreds of Users Served",
-        link: "https://www.linkedin.com/in/aklavyakumar",
-        linkText: "View Web Project"
-    },
-    {
-        id: "cv-iro-research-club",
-        title: "CV International Research Olympiad (IRO) Club",
-        category: "biotech",
-        categoryName: "Research & Science",
-        status: "President & Founder",
-        image: "img/biotech.jpg",
-        summary: "Founded CVHS IRO team, leading student research papers, experimental design, data analysis, and competition presentations.",
-        details: "Founded and leads the International Research Olympiad club at CVHS. Guides high school researchers through experimental design, quantitative data processing, academic writing, and publishing research papers for global science competitions.",
-        tags: ["Research Club Founder", "Data Analysis", "Scientific Writing", "Experimental Design"],
-        metrics: "Research Team Leader & Paper Mentor",
-        link: "https://www.cvschools.org",
-        linkText: "Research Olympiad Info"
-    },
-    {
-        id: "stemsters-treasurer",
-        title: "STEMsters K-8 Outreach & Regional Treasurer",
+        id: "central-pa-foodbank",
+        title: "Central PA Food Bank 10+ Year Service Initiative",
         category: "community",
-        categoryName: "Community & Outreach",
-        status: "Treasurer & Mentor",
+        categoryName: "Community & Culture",
+        status: "10+ Years Dedicated",
         image: "img/food.webp",
-        summary: "Treasurer for STEMsters K-8 outreach club & FBLA Region 26. Coached 40+ CV students in robotics summer camps & food bank fundraising.",
-        details: "Manages budgets and hands-on STEM learning workshops for K-8 students as STEMsters Treasurer. Coached 40+ Cumberland Valley students in summer robotics camps. Combined with 10+ years of dedicated service to the Pennsylvania Food Bank.",
-        tags: ["STEMsters Treasurer", "K-8 Mentorship", "40+ Campers Coached", "PA Food Bank 10+ Yrs"],
-        metrics: "40+ Campers Coached | 10+ Yrs Food Bank",
+        summary: "Decade-long sustained fundraising campaigns supporting food relief for 253,000+ monthly Central PA residents.",
+        details: "For over 10 consecutive years, Aklavya has spearheaded fundraising and hunger awareness drives for the Central Pennsylvania Food Bank, helping provide nutritious meals to 253,000+ monthly regional residents in need.",
+        tags: ["10+ Years Service", "Central PA Food Bank", "253k+ Impact", "Community Leadership"],
+        metrics: "10+ Years Sustained Fundraising",
         link: "https://www.centralpafoodbank.org",
-        linkText: "PA Food Bank Partner"
+        linkText: "Central PA Food Bank Partner Site"
+    },
+    {
+        id: "abha-bengali-community",
+        title: "ABHA Bengali Association Junior Patron & Ambassador",
+        category: "community",
+        categoryName: "Community & Culture",
+        status: "Junior Patron & Webmaster",
+        image: "img/abha.jpg",
+        summary: "Junior Patron for Association of Bengalis in Harrisburg Area (ABHA); created official web portal and raises $300+ annually for charity.",
+        details: "Serves as Junior Patron and Cultural Ambassador for ABHA (abhaweb.org). Built the official community web platform, co-hosts annual cultural festivals, and leads fundraising initiatives raising $300+ annually for local charity programs.",
+        tags: ["ABHA Junior Patron", "abhaweb.org", "$300+ Raised Annually", "Cultural Ambassador"],
+        metrics: "ABHA Junior Patron | $300+ Raised Annually",
+        link: "https://abhaweb.org/",
+        linkText: "Visit Official ABHA Website (abhaweb.org)"
     }
 ];
 
@@ -175,7 +189,7 @@ function initScrollRevealObserver() {
                 entry.target.classList.add("is-visible");
             }
         });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
 
     reveals.forEach(el => observer.observe(el));
 }
@@ -189,7 +203,7 @@ function initActiveNavOnScroll() {
 
     window.addEventListener("scroll", () => {
         let current = "";
-        const scrollPosition = window.scrollY + 120;
+        const scrollPosition = window.scrollY + 140;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
@@ -293,13 +307,13 @@ function initTypewriter() {
     if (!el) return;
 
     const phrases = [
-        "High School Senior @ Cumberland Valley HS ('27)",
-        "FTC Robotics Build & Programming Lead (RoadRunner/PedroPathing)",
-        "FBLA 8th & 10th Place National Competitor",
+        "FTC 8468 The Javengers Lead (Dean's List Semi-Finalist)",
+        "International Research Olympiad (IRO) World Semi-Finalist (Top 10%)",
+        "FBLA Dual National Top 10 Placer & 1st Place State Champion",
+        "Author of CogniTrack: Brain-Computer Interface for Burnout",
         "Penn State College of Medicine PULSE Scholar",
-        "CV Coding Club Founder (4 USACO Gold Students Mentored)",
-        "Brain-Computer Interface (BCI) Researcher",
-        "Science Olympiad National Medalist (19th & 20th Team)"
+        "CV Coding Club Founder (Coached 4 USACO Silver Students)",
+        "SciOly Robot Tour Lead (19th & 20th National Team Rank)"
     ];
 
     let phraseIdx = 0;
@@ -316,10 +330,10 @@ function initTypewriter() {
             charIdx++;
         }
 
-        let speed = isDeleting ? 30 : 65;
+        let speed = isDeleting ? 25 : 60;
 
         if (!isDeleting && charIdx === current.length) {
-            speed = 2000;
+            speed = 2200;
             isDeleting = true;
         } else if (isDeleting && charIdx === 0) {
             isDeleting = false;
@@ -370,7 +384,6 @@ function renderProjects(projects) {
         </div>
     `).join('');
 
-    // Re-trigger scroll reveal for newly rendered items
     initScrollRevealObserver();
 }
 
@@ -425,7 +438,7 @@ function openProjectModal(id) {
             <h2 class="section-title text-start mb-2" style="font-size: 1.8rem;">${project.title}</h2>
             <p class="text-accent fw-bold small mb-3"><i class="fas fa-medal me-2"></i>Honors/Metrics: ${project.metrics}</p>
         </div>
-        <img src="${project.image}" alt="${project.title}" class="img-fluid rounded-3 mb-4 w-100" style="max-height: 280px; object-fit: cover;">
+        <img src="${project.image}" alt="${project.title}" class="img-fluid rounded-3 mb-4 w-100" style="max-height: 300px; object-fit: cover;">
         <h4 class="h6 text-white mb-2"><i class="fas fa-align-left me-2 text-accent"></i>Overview & Contributions:</h4>
         <p class="text-secondary mb-4" style="line-height: 1.7; font-size: 0.95rem;">${project.details}</p>
         

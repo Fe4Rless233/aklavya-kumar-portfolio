@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aklavya Kumar | Community Service & Cultural Engagement. Central PA Food Bank 10+ year campaign, ABHA Bengali Association Junior Patron.">
+    <meta name="description" content="Aklavya Kumar | Community Service & Cultural Engagement. 10+ years Pennsylvania Food Bank fundraising, official ABHA webmaster, STEMsters Treasurer, Youth Robotics Coach.">
     <title>Aklavya Kumar | Community & Culture</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,18 +15,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
     <canvas id="particles-canvas"></canvas>
 
+    <!-- Navigation Bar -->
     <nav class="navbar-custom">
         <div class="container d-flex align-items-center justify-content-between">
             <a href="index.html" class="navbar-brand-custom">
                 Aklavya <span>Kumar</span>
             </a>
             <div class="d-none d-lg-flex align-items-center gap-2">
-                <a href="index.html#about" class="nav-link-custom">About</a>
-                <a href="index.html#projects" class="nav-link-custom">Projects Hub</a>
+                <a href="index.html" class="nav-link-custom">Home</a>
+                <a href="about.html" class="nav-link-custom">About</a>
                 <a href="stem.html" class="nav-link-custom">STEM &amp; Robotics</a>
-                <a href="academics.html" class="nav-link-custom">Academics</a>
+                <a href="academics.html" class="nav-link-custom">Academics &amp; Research</a>
                 <a href="community.html" class="nav-link-custom active">Community</a>
                 <a href="aspirations.html" class="nav-link-custom">Skills &amp; Vision</a>
             </div>
@@ -34,44 +36,89 @@
         </div>
     </nav>
 
+    <!-- Main Section -->
     <section class="section-padding">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Impact &amp; Service</span>
-                <h2 class="section-title">Community &amp; Culture</h2>
-                <p class="section-desc">Over a decade of sustained fundraising, middle school robotics coaching, and cultural leadership.</p>
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Impact &amp; Heritage</span>
+                <h2 class="section-title">Community Service &amp; Cultural Leadership</h2>
+                <p class="section-desc">Over a decade of dedicated fundraising for hunger relief, K-8 STEM mentorship, and official Bengali community patronage.</p>
             </div>
 
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="glass-card p-4 h-100 text-center">
-                        <i class="fas fa-hands-helping fa-3x text-accent mb-3"></i>
-                        <h4 class="h5 mb-2">Central PA Food Bank</h4>
-                        <span class="badge bg-danger rounded-pill mb-3">10+ Years</span>
-                        <p class="text-secondary small">
-                            Organizing community campaigns for over 10 consecutive years to support hunger relief serving 253,000+ Central PA residents monthly.
+            <!-- Central PA Food Bank Spotlight -->
+            <div class="row align-items-center g-5 mb-5">
+                <div class="col-lg-6 scroll-reveal-left">
+                    <div class="glass-card p-3">
+                        <img src="img/food.webp" alt="Central Pennsylvania Food Bank Support" class="img-fluid rounded-3 w-100">
+                    </div>
+                </div>
+                <div class="col-lg-6 scroll-reveal-right">
+                    <span class="badge bg-danger px-3 py-2 rounded-pill mb-3">KEY COMMUNITY INITIATIVE</span>
+                    <h3 class="h2 mb-3">Central Pennsylvania Food Bank</h3>
+                    <h5 class="text-accent mb-3"><i class="fas fa-heart me-2"></i> Over a Decade of Sustained Support</h5>
+                    <p class="text-secondary mb-3">
+                        For <strong>over ten consecutive years</strong>, Aklavya has been passionately involved in fundraising for the Central Pennsylvania Food Bank. This vital organization works to alleviate hunger, providing meals to more than 253,000 people monthly across Central Pennsylvania.
+                    </p>
+                    <p class="text-secondary mb-4">
+                        His long-term engagement reflects a deep commitment to sustainable social impact, organizing local community drives and mobilizing peers to strengthen regional hunger relief infrastructure.
+                    </p>
+                    <a href="https://www.centralpafoodbank.org" target="_blank" rel="noopener noreferrer" class="btn btn-hero-primary btn-sm">
+                        <i class="fas fa-external-link-alt me-1"></i> Visit Central PA Food Bank
+                    </a>
+                </div>
+            </div>
+
+            <!-- ABHA Bengali Community Spotlight -->
+            <div class="row align-items-center g-5 mb-5">
+                <div class="col-lg-6 order-lg-2 scroll-reveal-right">
+                    <div class="glass-card p-3">
+                        <img src="img/abha.jpg" alt="Association of Bengalis in Harrisburg Area (ABHA)" class="img-fluid rounded-3 w-100">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1 scroll-reveal-left">
+                    <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">JUNIOR PATRON &amp; CULTURAL AMBASSADOR</span>
+                    <h3 class="h2 mb-3">Association of Bengalis in Harrisburg Area</h3>
+                    <h5 class="text-accent mb-3"><i class="fas fa-landmark me-2"></i> Cultural Leadership &amp; Official Web Platform</h5>
+                    <p class="text-secondary mb-3">
+                        As Junior Patron and Cultural Ambassador for ABHA (<strong>abhaweb.org</strong>), Aklavya plays an active role in organizing and co-hosting annual cultural events that celebrate Bengali heritage, music, dance, and cuisine.
+                    </p>
+                    <p class="text-secondary mb-4">
+                        Created and built the official web portal for the organization. Drives annual fundraising initiatives that raise <strong>over $300 each year</strong> for cultural programs and local charitable initiatives.
+                    </p>
+                    <a href="https://abhaweb.org/" target="_blank" rel="noopener noreferrer" class="btn btn-hero-primary btn-sm">
+                        <i class="fas fa-globe me-1"></i> Visit Official ABHA Site (abhaweb.org)
+                    </a>
+                </div>
+            </div>
+
+            <!-- STEMsters & Youth Coaching Grid -->
+            <div class="row g-4 mt-4">
+                <div class="col-md-6 scroll-reveal-scale delay-1">
+                    <div class="glass-card p-4 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <i class="fas fa-calculator fa-2x text-cyan"></i>
+                            <div>
+                                <h4 class="h5 mb-0">STEMsters Club Treasurer</h4>
+                                <span class="small text-cyan">K-8 STEM Outreach</span>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mb-0">
+                            Manages budgets, dues, and fundraising for STEMsters, a K-8 outreach club promoting hands-on STEM learning. Mentors younger students in science and engineering projects.
                         </p>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="glass-card p-4 h-100 text-center">
-                        <i class="fas fa-chalkboard-teacher fa-3x text-accent mb-3"></i>
-                        <h4 class="h5 mb-2">Robotics Mentorship</h4>
-                        <span class="badge bg-info rounded-pill mb-3">Youth Coaching</span>
-                        <p class="text-secondary small">
-                            Mentoring Cumberland Valley middle school robotics students in mechanical design, Java programming, and strategy.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="glass-card p-4 h-100 text-center">
-                        <i class="fas fa-landmark fa-3x text-accent mb-3"></i>
-                        <h4 class="h5 mb-2">ABHA Cultural Ambassador</h4>
-                        <span class="badge bg-warning text-dark rounded-pill mb-3">Junior Patron</span>
-                        <p class="text-secondary small">
-                            Junior Patron of Association of Bengalis in Harrisburg Area, co-hosting cultural events and raising $300+ annually for charity.
+                <div class="col-md-6 scroll-reveal-scale delay-2">
+                    <div class="glass-card p-4 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <i class="fas fa-robot fa-2x text-accent"></i>
+                            <div>
+                                <h4 class="h5 mb-0">Youth Summer Robotics Coach</h4>
+                                <span class="small text-cyan">40+ CV Students Coached</span>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mb-0">
+                            Coached summer robotics camps for 40+ Cumberland Valley middle and high school students, teaching mechanics, coding logic, and competition strategy.
                         </p>
                     </div>
                 </div>
@@ -79,12 +126,19 @@
         </div>
     </section>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <footer>
         <div class="container text-center">
-            <p class="mb-0"><strong>Aklavya Kumar</strong> &bull; Class of 2027 &bull; Cumberland Valley High School</p>
+            <p class="mb-1"><strong>Aklavya Kumar</strong> &bull; Class of 2027 &bull; Cumberland Valley High School</p>
+            <p class="small text-muted">&copy; <script>document.write(new Date().getFullYear())</script> Aklavya Kumar. Driven by Innovation, Guided by Purpose.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
