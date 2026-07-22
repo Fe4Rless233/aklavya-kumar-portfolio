@@ -1,7 +1,7 @@
 /**
  * Aklavya Kumar Portfolio - Dynamic Interactive Engine (main.js)
  * High School Senior (Class of 2027) | Cumberland Valley High School
- * Multi-Page Interactive Engine with Verified Credentials & Direct Links
+ * Multi-Page Engine with Mobile Navigation Drawer & Scroll System
  */
 
 // --- 1. Comprehensive Verified Project Database ---
@@ -158,14 +158,46 @@ document.addEventListener("DOMContentLoaded", () => {
     initStatsCounter();
     initSkillBars();
     
-    // Scroll-Based System
+    // Mobile Navigation & Scroll System
+    initMobileNavDrawer();
     initScrollProgressBar();
     initScrollRevealObserver();
     initActiveNavOnScroll();
     initBackToTop();
 });
 
-// --- 3. Scroll Progress Indicator Bar ---
+// --- 3. Mobile Navigation Drawer Engine ---
+function initMobileNavDrawer() {
+    const toggleBtn = document.getElementById("mobile-nav-toggle");
+    const closeBtn = document.getElementById("mobile-drawer-close");
+    const overlay = document.getElementById("mobile-drawer-overlay");
+    const drawer = document.getElementById("mobile-drawer");
+    const mobileLinks = document.querySelectorAll(".mobile-drawer-link");
+
+    if (!toggleBtn || !drawer || !overlay) return;
+
+    function openDrawer() {
+        drawer.classList.add("active");
+        overlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeDrawer() {
+        drawer.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.style.overflow = "auto";
+    }
+
+    toggleBtn.addEventListener("click", openDrawer);
+    if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
+    overlay.addEventListener("click", closeDrawer);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener("click", closeDrawer);
+    });
+}
+
+// --- 4. Scroll Progress Indicator Bar ---
 function initScrollProgressBar() {
     const bar = document.getElementById("scroll-progress-bar");
     if (!bar) return;
@@ -178,7 +210,7 @@ function initScrollProgressBar() {
     });
 }
 
-// --- 4. Scroll Reveal Intersection Observer ---
+// --- 5. Scroll Reveal Intersection Observer ---
 function initScrollRevealObserver() {
     const reveals = document.querySelectorAll(".scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale");
     if (reveals.length === 0) return;
@@ -194,7 +226,7 @@ function initScrollRevealObserver() {
     reveals.forEach(el => observer.observe(el));
 }
 
-// --- 5. Scroll Active Navigation Tracking ---
+// --- 6. Scroll Active Navigation Tracking ---
 function initActiveNavOnScroll() {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-link-custom");
@@ -222,7 +254,7 @@ function initActiveNavOnScroll() {
     });
 }
 
-// --- 6. Back To Top Button Logic ---
+// --- 7. Back To Top Button Logic ---
 function initBackToTop() {
     const btn = document.getElementById("back-to-top");
     if (!btn) return;
@@ -243,7 +275,7 @@ function initBackToTop() {
     });
 }
 
-// --- 7. Particle Canvas Background ---
+// --- 8. Particle Canvas Background ---
 function initParticles() {
     const canvas = document.getElementById("particles-canvas");
     if (!canvas) return;
@@ -301,7 +333,7 @@ function initParticles() {
     draw();
 }
 
-// --- 8. Hero Typewriter ---
+// --- 9. Hero Typewriter ---
 function initTypewriter() {
     const el = document.getElementById("typewriter-text");
     if (!el) return;
@@ -346,7 +378,7 @@ function initTypewriter() {
     type();
 }
 
-// --- 9. Project Renderer ---
+// --- 10. Project Renderer ---
 function renderProjects(projects) {
     const grid = document.getElementById("projects-grid");
     if (!grid) return;
@@ -423,7 +455,7 @@ function initFiltersAndSearch() {
     }
 }
 
-// --- 10. Project Modal ---
+// --- 11. Project Modal ---
 function openProjectModal(id) {
     const project = PROJECTS_DATA.find(p => p.id === id);
     if (!project) return;
@@ -477,7 +509,7 @@ function initModal() {
     }
 }
 
-// --- 11. Stats Counter ---
+// --- 12. Stats Counter ---
 function initStatsCounter() {
     const statNumbers = document.querySelectorAll(".stat-number");
     let hasAnimated = false;
@@ -510,7 +542,7 @@ function initStatsCounter() {
     checkScroll();
 }
 
-// --- 12. Skill Bars ---
+// --- 13. Skill Bars ---
 function initSkillBars() {
     const fills = document.querySelectorAll(".skill-progress-fill");
     let animated = false;

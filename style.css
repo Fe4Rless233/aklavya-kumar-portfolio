@@ -1,6 +1,6 @@
 /* ==========================================================================
    Aklavya Kumar Portfolio - Cyber Glass Fabulous Dark Theme
-   Featuring Advanced Scroll-Based Interactions
+   Featuring Advanced Scroll Interactions & Mobile Navigation System
    ========================================================================== */
 
 :root {
@@ -192,7 +192,7 @@ a:hover {
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
 
-/* --- 4. Navigation Bar --- */
+/* --- 4. Desktop Navigation Bar --- */
 .navbar-custom {
     position: fixed;
     top: 0;
@@ -255,7 +255,139 @@ a:hover {
     box-shadow: 0 6px 22px var(--accent-red-glow);
 }
 
-/* --- 5. Hero Section --- */
+/* --- 5. Mobile Navigation System --- */
+.mobile-nav-toggle {
+    display: none;
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.mobile-nav-toggle:hover {
+    background: var(--accent-red);
+    color: #fff;
+    border-color: var(--accent-red);
+    box-shadow: 0 0 15px var(--accent-red-glow);
+}
+
+/* Mobile Drawer Overlay Backdrop */
+.mobile-drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 2400;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-smooth);
+}
+
+.mobile-drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Slide-out Mobile Nav Drawer */
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    max-width: 85vw;
+    height: 100vh;
+    background: var(--bg-surface-elevated);
+    border-left: 1px solid var(--border-color-glow);
+    z-index: 2500;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.9);
+    transform: translateX(100%);
+    transition: var(--transition-smooth);
+    overflow-y: auto;
+}
+
+.mobile-drawer.active {
+    transform: translateX(0);
+}
+
+.mobile-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-drawer-close {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-primary);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: var(--transition-fast);
+}
+
+.mobile-drawer-close:hover {
+    background: var(--accent-red);
+    color: #fff;
+}
+
+.mobile-drawer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.mobile-drawer-link {
+    color: var(--text-secondary);
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 12px 18px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: var(--transition-fast);
+    text-decoration: none;
+}
+
+.mobile-drawer-link i {
+    width: 24px;
+    text-align: center;
+    color: var(--accent-red);
+}
+
+.mobile-drawer-link:hover,
+.mobile-drawer-link.active {
+    color: var(--text-primary);
+    background: rgba(255, 43, 85, 0.15);
+    border: 1px solid rgba(255, 43, 85, 0.35);
+}
+
+.mobile-drawer-footer {
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* --- 6. Hero Section --- */
 .hero-section {
     min-height: calc(100vh - 80px);
     display: flex;
@@ -283,7 +415,7 @@ a:hover {
 }
 
 .hero-title {
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 1.1;
     margin-bottom: 20px;
 }
@@ -361,7 +493,7 @@ a:hover {
     100% { transform: translateY(-12px); }
 }
 
-/* --- 6. Stats Counter Bar --- */
+/* --- 7. Stats Counter Bar --- */
 .stats-bar {
     padding: 40px 0;
     position: relative;
@@ -391,7 +523,7 @@ a:hover {
     letter-spacing: 0.5px;
 }
 
-/* --- 7. Section Formatting --- */
+/* --- 8. Section Formatting --- */
 .section-padding {
     padding: 100px 0;
     position: relative;
@@ -424,7 +556,7 @@ a:hover {
     font-size: 1.1rem;
 }
 
-/* --- 8. Projects Showcase Hub --- */
+/* --- 9. Projects Showcase Hub --- */
 .showcase-controls {
     display: flex;
     flex-wrap: wrap;
@@ -598,7 +730,7 @@ a:hover {
     box-shadow: 0 4px 15px var(--accent-red-glow);
 }
 
-/* --- 9. Project Modal --- */
+/* --- 10. Project Modal --- */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -659,7 +791,7 @@ a:hover {
     background: var(--accent-red);
 }
 
-/* --- 10. Interactive Skill Bars --- */
+/* --- 11. Interactive Skill Bars --- */
 .skill-bar-wrapper {
     margin-bottom: 22px;
 }
@@ -688,7 +820,7 @@ a:hover {
     box-shadow: 0 0 10px var(--accent-cyan-glow);
 }
 
-/* --- 11. Timeline Layout --- */
+/* --- 12. Timeline Layout --- */
 .timeline-container {
     position: relative;
     padding-left: 30px;
@@ -728,7 +860,7 @@ a:hover {
     margin-bottom: 6px;
 }
 
-/* --- 12. Contact Form & Buttons --- */
+/* --- 13. Contact Form & Buttons --- */
 .form-control-custom {
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
@@ -786,7 +918,7 @@ a:hover {
     transform: translateY(-3px);
 }
 
-/* --- 13. Back to Top Button --- */
+/* --- 14. Back to Top Button --- */
 #back-to-top {
     position: fixed;
     bottom: 35px;
@@ -820,7 +952,7 @@ a:hover {
     transform: translateY(-5px);
 }
 
-/* --- 14. Footer --- */
+/* --- 15. Footer --- */
 footer {
     background: #040508;
     border-top: 1px solid var(--border-color);
@@ -857,14 +989,37 @@ footer {
     box-shadow: 0 4px 15px var(--accent-red-glow);
 }
 
-/* Responsive */
+/* --- 16. Mobile & Tablet Responsiveness --- */
 @media (max-width: 991px) {
     body { padding-top: 70px; }
+    .mobile-nav-toggle { display: flex; }
     .hero-section { text-align: center; }
     .hero-bio { margin: 0 auto 36px; }
     .profile-halo-container { width: 260px; height: 260px; margin-top: 40px; }
     .floating-badge { display: none; }
     .showcase-controls { flex-direction: column; align-items: stretch; }
     .search-box { min-width: 100%; }
+    
+    .filter-pills {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+    }
+    
+    .filter-pills::-webkit-scrollbar {
+        display: none;
+    }
+
     #back-to-top { bottom: 20px; right: 20px; width: 44px; height: 44px; }
+    .modal-content-glass { padding: 24px 18px; }
+}
+
+@media (max-width: 576px) {
+    .hero-title { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1.1rem; }
+    .stat-number { font-size: 2.2rem; }
+    .stat-label { font-size: 0.8rem; }
+    .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; }
 }
